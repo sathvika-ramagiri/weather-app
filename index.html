@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather Dashboard</h1>
+            <div class="search-container">
+                <input type="text" id="city-search" placeholder="Enter city name...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </header>
+
+        <div id="error-container" class="hidden">
+            <p id="error-message"></p>
+        </div>
+
+        <main>
+            <section id="current-weather" class="hidden">
+                <h2 id="city-name"></h2>
+                <div class="weather-info">
+                    <div class="weather-icon">
+                        <i id="weather-icon" class="fas"></i>
+                    </div>
+                    <div class="weather-data">
+                        <p id="current-date"></p>
+                        <p id="temperature"></p>
+                        <p id="humidity"></p>
+                        <p id="wind-speed"></p>
+                        <p id="description"></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="forecast" class="hidden">
+                <h2>5-Day Forecast</h2>
+                <div class="forecast-container"></div>
+            </section>
+
+            <section id="chart-container" class="hidden">
+                <h2>Temperature Trend</h2>
+                <canvas id="temp-chart"></canvas>
+            </section>
+
+            <section id="history" class="hidden">
+                <h2>Search History</h2>
+                <div id="history-container"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
